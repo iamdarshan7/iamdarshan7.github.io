@@ -16,20 +16,40 @@
         h1 { margin: 0 0 16px 0; padding: 0 0 16px 0; font-size: 42px; font-weight: bold; letter-spacing: -2px; border-bottom: 1px solid #999; }
         h2 { font-size: 20px; margin: 0 0 6px 0; position: relative; }
         h2 span { position: absolute; bottom: 0; right: 0; font-style: italic; font-family: Georgia, Serif; font-size: 16px; color: #999; font-weight: normal; }
+        h1.fn { color: rgb(209, 210, 211); text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; }
         p { margin: 0 0 16px 0; }
         a { color: #999; text-decoration: none; border-bottom: 1px dotted #999; }
         a:hover { border-bottom-style: solid; color: black; }
         ul { margin: 0 0 32px 17px; }
         #objective { width: 500px; float: left; }
-        #objective p { font-family: Georgia, Serif; font-style: italic; color: #666; }
-        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 190px; border-right: 1px solid #999;  }
-        dt1 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 170px; border-right: 1px solid #999; }
-        dt2 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 150px; border-right: 1px solid #999;  }
-        dt3 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 150px; border-right: 1px solid #999;  }
-        dt4 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 120px; border-right: 1px solid #999;  }
+        #objective p {  width: 500px; font-family: Georgia, Serif; font-style: italic; color: #666; display: inline;}
+        dt { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 190px; border-right: 1px solid #999; text-shadow: 2px 2px 3px yellow, 3px 3px 5px red;}
+        dt1 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 170px; border-right: 1px solid #999; text-shadow: 2px 2px 3px yellow, 3px 3px 5px red;}
+        dt2 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 150px; border-right: 1px solid #999;  text-shadow: 2px 2px 3px yellow, 3px 3px 5px red;}
+        dt3 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 150px; border-right: 1px solid #999;  text-shadow: 2px 2px 3px yellow, 3px 3px 5px red;}
+        dt4 { font-style: italic; font-weight: bold; font-size: 18px; text-align: right; padding: 0 26px 0 0; width: 150px; float: left; height: 120px; border-right: 1px solid #999;  text-shadow: 2px 2px 3px yellow, 3px 3px 5px red;}
                 
         dd { width: 600px; float: right; margin:2px;}
         dd.clear { float: none; margin: 0; height: 15px; }
+
+        .color-change-div{
+            position: relative;
+	        display: inline-block;
+        }
+        
+        .color-change-div .img-color {
+            display: none;
+	        position: absolute;
+            top: 0;
+            left: 0;
+	        z-index: 99;
+        }
+        
+        .color-change-div:hover .img-color {
+            display: inline;
+	        cursor: pointer;
+        }
+
     </style>
 </head>
 
@@ -38,20 +58,25 @@
     <div id="page-wrap">
     
         <!-- <img src="images/cthulu.png" alt="Photo of Cthulu" id="pic" /> -->
-    
+        
         <div id="contact-info" class="vcard">
-        
+            
             <!-- Microformats! -->
-        
+            
             <h1 class="fn">Darshan Thapa</h1>
-        
+            
+            <div id="objective-photo" class="color-change-div">
+                <img src="images/altphoto.jpg" alt="alt-photo" />
+                <img src="images/photo.jpg" alt="org-photo" class="img-color"/>
+            </div>
+
             <p>
                 Ph.no : <span class="tel">9810452566</span><br />
                 Email : <a class="email" href="mailto:darshanthapa872@gmail.com">darshanthapa872@gmail.com</a><br>
                 My Python Package Link [ PyPI ] : <a href="https://pypi.org/project/edv-data-inspect/1.0.1/">edv-data-inspect</a> , <a href="https://pypi.org/project/open-this/">social-media-opener</a><br>
             </p>
         </div>
-                
+        
         <div id="objective">
             <p>
                 I am an energetic young developer, seeking a 
